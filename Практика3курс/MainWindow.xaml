@@ -1,0 +1,132 @@
+﻿<Window x:Class="Практика3курс.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практика3курс"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="325" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.Row="1">
+            <TabItem Header="Задание 1">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="107*"/>
+                        <RowDefinition Height="135*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="205*"/>
+                        <ColumnDefinition Width="289*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="Ввод данных">
+                        <Grid>
+                            <TextBox x:Name="firstNumbrtTB" HorizontalAlignment="Left" Margin="114,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57"/>
+                            <TextBox x:Name="secondNumberTB" HorizontalAlignment="Left" Margin="114,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57"/>
+                            <Label Content="Первое число" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Второе число" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top"/>
+                            <Button Click="FirstTask_Click" Content="Сравнить числа" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top"/>
+
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Задание 2">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="139*"/>
+                        <ColumnDefinition Width="108*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="119*"/>
+                        <RowDefinition Height="123*"/>
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="Ввод данных">
+                        <Grid>
+                            <Button Content="Проверить" HorizontalAlignment="Left" Margin="197,66,0,0" VerticalAlignment="Top" Click="SecondSolving_Click"/>
+                            <TextBox x:Name="firstNumber_TB" HorizontalAlignment="Left" Margin="86,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56"/>
+                            <TextBox x:Name="secondNumber_TB" HorizontalAlignment="Left" Margin="86,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56"/>
+                            <TextBox x:Name="thirdNumber_TB" HorizontalAlignment="Left" Margin="86,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56"/>
+                            <Label Content="1 число" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top"/>
+                            <Label Content="2 число" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top"/>
+                            <Label Content="3 число" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top"/>
+
+
+
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Column="1" Header="Вывод">
+                        <Grid Grid.Column="1">
+                            <TextBox IsReadOnly="True" x:Name="resultSecondTB"  HorizontalAlignment="Left" Margin="10,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
+                            <Label Content="Числа, которые положительные,&#xD;&#xA; взвести в квадрат" HorizontalAlignment="Center" Margin="0,1,0,0" VerticalAlignment="Top" Height="56"/>
+
+                        </Grid>
+                    </GroupBox>
+
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Задание 3">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32*"/>
+                        <RowDefinition Height="89*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="229*"/>
+                        <ColumnDefinition Width="265*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="GroupBox">
+                        <Grid>
+                            <Label Content="Длина массива" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="lenghtTB" HorizontalAlignment="Left" Margin="108,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42"/>
+                            <Button Click="CreateArray_Click" Content="Создать" HorizontalAlignment="Left" Margin="164,17,0,0" VerticalAlignment="Top"/>
+
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Column="1" Header="Вывод">
+                        <Grid>
+                            <Label Content="Массив" HorizontalAlignment="Left" Margin="5,-2,0,0" VerticalAlignment="Top" Height="41"/>
+                            <TextBox IsReadOnly="True" x:Name="arrayTB" HorizontalAlignment="Center" Margin="0,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <Label Content="Сумма цифр, которые делятся на три" HorizontalAlignment="Left" Margin="0,12,0,0" VerticalAlignment="Top" Height="41"/>
+                            <TextBox IsReadOnly="True" x:Name="sumNumberTB" HorizontalAlignment="Left" Margin="213,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38"/>
+
+                        </Grid>
+                    </GroupBox>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Задание 4">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="52*"/>
+                        <RowDefinition Height="69*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="113*"/>
+                        <ColumnDefinition Width="134*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="DataGrid" Grid.Column="1"/>
+                    <GroupBox Header="Настройки и вывод">
+                        <Grid>
+                            <Button Click="SolvingMatrix_Click" Content="Ответ" HorizontalAlignment="Left" Margin="168,51,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="rowTB" HorizontalAlignment="Left" Margin="129,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="29"/>
+                            <TextBox x:Name="columnTB" HorizontalAlignment="Left" Margin="129,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="29"/>
+                            <Label Content="Количество строк" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Количество колонок" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+
+                        </Grid>
+                    </GroupBox>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
