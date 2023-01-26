@@ -9,7 +9,7 @@ namespace Сlases
 {
     public static class Practice
     {
-        public static void Create(this Matrix<int> numbers, int row, int column)
+        public static void Create(this Matrix<int> numbers, int row, int column) // метод на создание матрицы
         {
             int[,] matrix = new int[row, column];
             Random random = new();
@@ -20,16 +20,16 @@ namespace Сlases
                     matrix[i, j] = random.Next(1, 3);
                 }
             }
-            numbers.Add(matrix);
+            numbers.Add(matrix); // метод заполнения маттрицы
         }
-        public static bool EqualNumber(int firstNumber, int secondNumber)
+        public static bool EqualNumber(int firstNumber, int secondNumber) // 1 задание, Сравнивания двух цифр. Если они равны, то true, иначе false
         {
             if (firstNumber == secondNumber) return true;
             else return false;
         }
-        public static int[] SquareNumberOnlyPositivNumb(int first, int second, int third)
+        public static int[] SquareNumberOnlyPositivNumb(int first, int second, int third) // Если число положительное, то взводим его в квадрат
         {
-            int [] result = new int[3];
+            int [] result = new int[3]; // массив с 3  ячейками
             result[0] = first;
             result[1] = second;
             result[2] = third;
@@ -37,18 +37,18 @@ namespace Сlases
             {
                 if (result[i] > 0) result[i] *= result[i];
             }
-            return result;
+            return result; // возвращает целый массив
         }
-        public static int SumAllNumberOfDivThree(int[] array)
+        public static int SumAllNumberOfDivThree(int[] array) // Найти сумму чисел, которые делятся на три
         {
             int sum = 0;
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < array.Length; i++) // цикл
             {
                 if (array[i] % 3 == 0) sum += array[i];
             }
             return sum;
         }
-        public static int FindFirstColumnOfContainsMaxAmouthEqualNumber(this Matrix<int> matrix, int Row, int Column)
+        public static int FindFirstColumnOfContainsMaxAmouthEqualNumber(this Matrix<int> matrix) // нахождение 1 столбца, где больше всего совпадений цифр
         {
             
             // Сортировка матрицы
@@ -68,7 +68,7 @@ namespace Сlases
                 }
             }
 
-            int[] maxIdentitys = new int[matrix.ColumnCount];
+            int[] maxIdentitys = new int[matrix.ColumnCount]; 
 
             for (int j = 0; j < matrix.ColumnCount; j++)
             {

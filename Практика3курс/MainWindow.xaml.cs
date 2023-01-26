@@ -73,7 +73,7 @@ namespace Практика3курс
             {
                 Practice.Create(matrix, rowMatrix, columnMatrix);
                 DataGrid.ItemsSource = matrix.ToDataTable().DefaultView;
-                MessageBox.Show($"Столбец в котором одинаковых чисел больше - {Practice.FindFirstColumnOfContainsMaxAmouthEqualNumber(matrix, rowMatrix, columnMatrix)}");
+                MessageBox.Show($"Столбец в котором одинаковых чисел больше - {Practice.FindFirstColumnOfContainsMaxAmouthEqualNumber(matrix)}");
                 rowTB.Clear();
                 columnTB.Clear();
 
