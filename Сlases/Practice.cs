@@ -89,7 +89,7 @@ namespace Сlases
                     {
                         maxCount = count;
                     }
-                }
+                } // находим у каждого столбца, количество совпадений и записываем в массив
                 maxIdentitys[j] = maxCount;
             }
             int index = 0;
